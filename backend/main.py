@@ -1,25 +1,19 @@
-"""
-=====================================
-VOS - Voice Operating System
-=====================================
+from core.engine import CoreEngine
+from config import APP_NAME, VERSION
 
-Author : Shanjil
-Version : 0.0.1 Alpha
-"""
 
 def start_vos():
     print("=" * 50)
-    print("🚀 Starting VOS...")
+    print(f"🚀 Starting {APP_NAME} {VERSION}")
     print("=" * 50)
 
-    print("Loading Core...")
-    print("Loading Modules...")
-    print("Loading AI...")
+    core = CoreEngine()
+    core.start()
 
     print()
-
     print("👋 Hey mate.")
     print("Ready to build something awesome?")
+
 
 if __name__ == "__main__":
     start_vos()
