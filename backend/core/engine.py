@@ -1,5 +1,6 @@
 from modules.echo import Echo
 from modules.atlas import Atlas
+from modules.titan import Titan
 
 
 class CoreEngine:
@@ -9,7 +10,8 @@ class CoreEngine:
 
         self.modules = [
             Echo(),
-            Atlas()
+            Atlas(),
+            Titan(),
         ]
 
     def start(self):
@@ -25,3 +27,4 @@ class CoreEngine:
 
         print()
         print("✅ All Modules Loaded")
+        
