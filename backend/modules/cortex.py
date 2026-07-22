@@ -23,6 +23,36 @@ class Cortex:
                 "target": target
             }
 
+        if normalized in ("take screenshot", "capture screen"):
+            return {"intent": "INTENT_CAPTURE_SCREEN"}
+
+        if normalized in ("capture active window", "current window", "active application"):
+            return {"intent": "INTENT_CAPTURE_WINDOW"}
+
+        if normalized in ("what is on my screen", "what is on the screen", "describe screen"):
+            return {"intent": "INTENT_DESCRIBE_SCREEN"}
+
+        if normalized in ("show current resolution", "screen size", "screen information", "show screen information"):
+            return {"intent": "INTENT_GET_SCREEN_INFO"}
+
+        if normalized in ("read my screen", "read screen", "read current screen", "what is on my screen"):
+            return {"intent": "INTENT_READ_SCREEN"}
+
+        if normalized in ("read current window", "read this window", "read active window"):
+            return {"intent": "INTENT_READ_WINDOW"}
+
+        if normalized in ("read highlighted text", "read selected text", "read text"):
+            return {"intent": "INTENT_READ_TEXT"}
+
+        if normalized in ("extract text", "extract this text", "read selected area"):
+            return {"intent": "INTENT_EXTRACT_TEXT"}
+
+        if normalized in ("read browser", "read this page", "read page", "read webpage"):
+            return {"intent": "INTENT_READ_BROWSER"}
+
+        if normalized in ("read terminal", "read document", "read pdf", "read image"):
+            return {"intent": "INTENT_READ_DOCUMENT"}
+
         if normalized in ("click", "single click", "single-click"):
             return {"intent": "CLICK"}
 

@@ -2,3 +2,9 @@ SpeechRecognition
 PyAudio
 pyttsx3
 pyautogui
+mss
+Pillow
+pygetwindow
+easyocr
+opencv-python
+numpy

@@ -48,6 +48,27 @@ class Atlas:
                 "reason": "Unsupported application"
             }
 
+        if intent == "INTENT_CAPTURE_SCREEN":
+            return {"action": "CAPTURE_SCREEN"}
+
+        if intent == "INTENT_CAPTURE_WINDOW":
+            return {"action": "CAPTURE_ACTIVE_WINDOW"}
+
+        if intent == "INTENT_DESCRIBE_SCREEN":
+            return {"action": "DESCRIBE_SCREEN"}
+
+        if intent == "INTENT_GET_SCREEN_INFO":
+            return {"action": "GET_SCREEN_INFO"}
+
+        if intent in {"INTENT_READ_SCREEN", "INTENT_READ_BROWSER", "INTENT_READ_DOCUMENT"}:
+            return {"action": "OCR_SCREEN"}
+
+        if intent in {"INTENT_READ_WINDOW"}:
+            return {"action": "OCR_WINDOW"}
+
+        if intent in {"INTENT_READ_TEXT", "INTENT_EXTRACT_TEXT"}:
+            return {"action": "OCR_IMAGE"}
+
         if intent == "CLICK":
             return {"action": "CLICK", "button": "left"}
 
